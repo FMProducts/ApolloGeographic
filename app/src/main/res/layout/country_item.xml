@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="6dp"
+        app:cardBackgroundColor="?colorOnPrimary"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/country_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Turkmenistan (emoji)"
+                android:textColor="?colorOnSecondary"
+                app:fontFamily="@font/bold"
+                android:textSize="18sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="12dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/info_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/country_name">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/country_phone_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="+993"
+                    android:drawableStart="@drawable/phone"
+                    android:layout_marginStart="12dp"
+                    android:textColor="?colorPrimary"
+                    app:drawableTint="?colorPrimary"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:drawablePadding="4dp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/country_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Manant"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/currency"
+                    android:layout_marginStart="12dp"
+                    android:textColor="?colorPrimary"
+                    app:drawableTint="?colorPrimary"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/country_capital_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="Ashgabat"
+                    android:drawableStart="@drawable/city"
+                    android:layout_marginStart="12dp"
+                    android:textColor="?colorPrimary"
+                    app:drawableTint="?colorPrimary"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+                    />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/country_languages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Turkmen, Russian"
+                android:drawableStart="@drawable/language"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="?colorPrimary"
+                app:drawableTint="?colorPrimary"
+                android:gravity="center"
+                android:layout_below="@id/info_container"
+                android:drawablePadding="4dp"
+                />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
